@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+        <title>Prometheus Login</title>
+        <link rel="stylesheet" href="CSS/PrometheusCSS.css"/>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script>
+            function initialize() {
+             var mapCanvas = document.getElementById('map-canvas');
+             var mapOptions = {
+             center: new google.maps.LatLng(44.5403, -78.5463),
+             zoom: 12,
+             mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    </head>
+<body>
+    <div id="locMain">
+        <div class="locHeader">
+        <input type="image" class="locBtn" src="images/location.png"></input>
+        </div>
+        <div id="map-canvas"></div>
+    </div>
+</body>
+</html>
